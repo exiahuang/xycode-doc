@@ -1,0 +1,1218 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Xycode is a lightweight command executor for vscode.">
+      
+      
+        <link rel="canonical" href="https://github.io/exiahuang/xycode-doc/">
+      
+      
+        <meta name="author" content="Exia.Huang">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en, ja, zh-CN">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>xycode</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/application.1b62728e.css">
+      
+      
+    
+    
+      <script src="assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+    
+    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#xycode" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://github.io/exiahuang/xycode-doc/" title="Xycode" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Xycode
+            </span>
+            <span class="md-header-nav__topic">
+              
+                xycode
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/exiahuang/Xycode/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    exiahuang/Xycode
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+<nav class="md-tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="." class="md-tabs__link md-tabs__link--active">
+        xycode
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="usage/c-program/" class="md-tabs__link">
+          Usage
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://github.io/exiahuang/xycode-doc/" title="Xycode" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Xycode
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/exiahuang/Xycode/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    exiahuang/Xycode
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        xycode
+      </label>
+    
+    <a href="." title="xycode" class="md-nav__link md-nav__link--active">
+      xycode
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-config" class="md-nav__link">
+    Download config
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-in-vscode" class="md-nav__link">
+    Download in Vscode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manually-download" class="md-nav__link">
+    Manually Download
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-config" class="md-nav__link">
+    Custom Config
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-json-file" class="md-nav__link">
+    create json file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-data-construct" class="md-nav__link">
+    json data construct
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predefined-variables" class="md-nav__link">
+    Predefined variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predefined-trigger" class="md-nav__link">
+    Predefined trigger
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#friendly-user-interface" class="md-nav__link">
+    friendly user interface
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config-example" class="md-nav__link">
+    config example
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-input" class="md-nav__link">
+    example 1: input
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-select" class="md-nav__link">
+    example 2: select
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-multiselect" class="md-nav__link">
+    example 3: multiselect
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-4-openfolderdailog" class="md-nav__link">
+    example 4: openFolderDailog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-5-singlefiledailog" class="md-nav__link">
+    example 5: singleFileDailog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-6-multifilesdailog" class="md-nav__link">
+    example 6: multiFilesDailog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-7-run-command-in-wsl" class="md-nav__link">
+    example 7: run command in wsl
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-8-auto-formatter-and-auto-runner" class="md-nav__link">
+    example 8: auto formatter and auto runner
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-10-user-prettier-to-format-source-code" class="md-nav__link">
+    example 10: user prettier to format source code.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shortkey" class="md-nav__link">
+    Shortkey
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extension-settings" class="md-nav__link">
+    Extension Settings
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="index.ja/" title="xycode日本語" class="md-nav__link">
+      xycode日本語
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="index.zh-CN/" title="xycode中文" class="md-nav__link">
+      xycode中文
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Usage
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Usage
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="usage/c-program/" title="C Program in xycode" class="md-nav__link">
+      C Program in xycode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="usage/nodejs/" title="Nodejs in xycode" class="md-nav__link">
+      Nodejs in xycode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="usage/python/" title="python in xycode" class="md-nav__link">
+      python in xycode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="usage/sfdx/" title="Salesforce CLI in xycode" class="md-nav__link">
+      Salesforce CLI in xycode
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-config" class="md-nav__link">
+    Download config
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-in-vscode" class="md-nav__link">
+    Download in Vscode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manually-download" class="md-nav__link">
+    Manually Download
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-config" class="md-nav__link">
+    Custom Config
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-json-file" class="md-nav__link">
+    create json file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-data-construct" class="md-nav__link">
+    json data construct
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predefined-variables" class="md-nav__link">
+    Predefined variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predefined-trigger" class="md-nav__link">
+    Predefined trigger
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#friendly-user-interface" class="md-nav__link">
+    friendly user interface
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config-example" class="md-nav__link">
+    config example
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-input" class="md-nav__link">
+    example 1: input
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-select" class="md-nav__link">
+    example 2: select
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-multiselect" class="md-nav__link">
+    example 3: multiselect
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-4-openfolderdailog" class="md-nav__link">
+    example 4: openFolderDailog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-5-singlefiledailog" class="md-nav__link">
+    example 5: singleFileDailog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-6-multifilesdailog" class="md-nav__link">
+    example 6: multiFilesDailog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-7-run-command-in-wsl" class="md-nav__link">
+    example 7: run command in wsl
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-8-auto-formatter-and-auto-runner" class="md-nav__link">
+    example 8: auto formatter and auto runner
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-10-user-prettier-to-format-source-code" class="md-nav__link">
+    example 10: user prettier to format source code.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shortkey" class="md-nav__link">
+    Shortkey
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extension-settings" class="md-nav__link">
+    Extension Settings
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/exiahuang/Xycode/edit/master/docs/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="xycode">xycode<a class="headerlink" href="#xycode" title="Permanent link">&para;</a></h1>
+<p><a href="https://github.com/exiahuang/Xycode">xycode</a> is a lightweight command executor for vscode.</p>
+<p>If you want to build a vscode extension, maybe you can use <code>xycode</code> first.</p>
+<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[x]  Less than 100k.</li>
+<li>[x]  Shared configuration (tasks/settings) of VScode.</li>
+<li>[x]  Integrated with system command and work with vscode.</li>
+<li>[x]  Support c lang.</li>
+<li>[x]  Support vbs.</li>
+<li>[x]  Support dotnet core.</li>
+<li>[x]  Support go language.</li>
+<li>[x]  Support python.</li>
+<li>[x]  Support ruby.</li>
+<li>[x]  Support gradle language.</li>
+<li>[x]  Support npm/nodejs/express/vue.</li>
+<li>[x]  Support prettier, format source automatically.</li>
+<li>[x]  Support Heroku development.</li>
+<li>[x]  Support git command.</li>
+<li>[x]  Support sfdx, it is a Rapid development tool for Salesforce SFDX Development.</li>
+<li>[x]  Support Wenyan 文言文編程語言.</li>
+<li>[x]  Support hexo/mkdoc blog.</li>
+<li>[ ]  TODO : jekyll .</li>
+<li>[ ]  TODO :  Docker development.</li>
+<li>[ ]  TODO : a calculator.</li>
+</ul>
+<h2 id="download-config">Download config<a class="headerlink" href="#download-config" title="Permanent link">&para;</a></h2>
+<h3 id="download-in-vscode">Download in Vscode<a class="headerlink" href="#download-in-vscode" title="Permanent link">&para;</a></h3>
+<p>run <code>xycode: download config</code>, and select config file.</p>
+<h3 id="manually-download">Manually Download<a class="headerlink" href="#manually-download" title="Permanent link">&para;</a></h3>
+<p>Please download config From <a href="https://github.com/exiahuang/Xycode-config">xycode-config</a>.
+And copy the configs to Home directory( <code>~/.xycode</code> or <code>%USERPROFILE%/.xycode</code>)</p>
+<h2 id="custom-config">Custom Config<a class="headerlink" href="#custom-config" title="Permanent link">&para;</a></h2>
+<h3 id="create-json-file">create json file<a class="headerlink" href="#create-json-file" title="Permanent link">&para;</a></h3>
+<p>create json file in below
+Windows user: <code>%USERPROFILE%/.xycode</code>
+Linux/Mac user: <code>~/.xycode</code></p>
+<h3 id="json-data-construct">json data construct<a class="headerlink" href="#json-data-construct" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;tasks&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;label name, required&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;description, not required&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;your command, required&quot;</span><span class="p">,</span>
+            <span class="err">//</span> <span class="err">cwd</span> <span class="err">is</span> <span class="err">not</span> <span class="err">required</span>
+            <span class="nt">&quot;cwd&quot;</span><span class="p">:</span> <span class="s2">&quot;path of current working directory&quot;</span><span class="p">,</span>
+            <span class="err">//</span> <span class="err">filetypes</span> <span class="err">is</span> <span class="err">not</span> <span class="err">required</span>
+            <span class="err">//</span> <span class="nt">&quot;filetypes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;.py&quot;</span><span class="p">],</span>
+            <span class="err">//</span> <span class="err">if</span> <span class="err">you</span> <span class="err">not</span> <span class="err">need</span> <span class="err">the</span> <span class="err">command</span> <span class="err">,</span> <span class="err">please</span> <span class="err">set</span> <span class="err">it</span> <span class="err">true</span>
+            <span class="err">//</span> <span class="nt">&quot;inActive&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="err">//</span> <span class="err">show</span> <span class="err">the</span> <span class="err">message</span> <span class="err">in</span> <span class="err">termial,</span> <span class="err">default</span> <span class="err">show</span> <span class="err">in</span> <span class="err">channel.</span>
+            <span class="err">//</span> <span class="nt">&quot;termial&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="err">name?:</span> <span class="err">string,</span> <span class="err">shellPath?:</span> <span class="err">string,</span> <span class="err">shellArgs?:</span> <span class="err">string[]</span> <span class="err">|</span> <span class="err">string</span> <span class="p">}</span><span class="err">;</span>
+            <span class="err">//</span> <span class="err">before</span> <span class="err">run</span> <span class="err">the</span> <span class="err">command</span><span class="p">,</span> <span class="err">you</span> <span class="err">can</span> <span class="err">set</span> <span class="err">some</span> <span class="err">check.</span>
+            <span class="nt">&quot;beforeTriggers&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;buildin&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;fn&quot;</span><span class="p">:</span> <span class="s2">&quot;CheckFileExist&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;${project_directory}/${project_name}&quot;</span><span class="p">]</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="err">//</span> <span class="err">after</span> <span class="err">ran</span> <span class="err">the</span> <span class="err">command,</span> <span class="err">you</span> <span class="err">can</span> <span class="err">do</span> <span class="err">something.</span>
+            <span class="nt">&quot;afterTriggers&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;buildin&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;fn&quot;</span><span class="p">:</span> <span class="s2">&quot;SwitchFolder&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;${project_directory}/${project_name}&quot;</span><span class="p">]</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;variables&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;apex_template&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;sfdc apex template&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;DefaultApexClass&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;ApexException&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;ApexUnitTest&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;InboundEmailService&quot;</span>
+            <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;base_metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;default sfdc metadata&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;ApexClass, ApexPage, ApexComponent, ApexTrigger&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="predefined-variables">Predefined variables<a class="headerlink" href="#predefined-variables" title="Permanent link">&para;</a></h3>
+<ul>
+<li>\${HOME} - Home directory</li>
+<li>\${file} - the current opened file</li>
+<li>\${fileBasename} - the current opened file's basename</li>
+<li>\${fileBasenameNoExtension} - the current opened file's basename with no file extension</li>
+<li>\${workspaceFolder} - the path of the folder opened</li>
+<li>\${workspaceFolderBasename} - the name of the folder opened in Sublime without any slashes (/)</li>
+<li>\${fileDirname} - the current opened file's dirname</li>
+<li>\${fileExtname} - the current opened file's extension</li>
+<li>\${YYYYMMDD} - current date</li>
+<li>\${YYYYMMDD_HHmm} - current datetime</li>
+</ul>
+<h3 id="predefined-trigger">Predefined trigger<a class="headerlink" href="#predefined-trigger" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Mkdirs - make directory</li>
+<li>SwitchFolder - switch project folder</li>
+<li>OpenFile - open file</li>
+<li>CheckFileExist - check file exist</li>
+<li>Diff - diff file</li>
+</ul>
+<h3 id="friendly-user-interface">friendly user interface<a class="headerlink" href="#friendly-user-interface" title="Permanent link">&para;</a></h3>
+<ul>
+<li>input - Custom Input String</li>
+<li>select - Select List</li>
+<li>multiselect - Multiple Select List</li>
+<li>openFolderDailog - Folder Path Selector</li>
+<li>singleFileDailog - File Path Selector</li>
+<li>multiFilesDailog - Mutliple File Paths Selector</li>
+</ul>
+<h2 id="config-example">config example<a class="headerlink" href="#config-example" title="Permanent link">&para;</a></h2>
+<h3 id="example-1-input">example 1: input<a class="headerlink" href="#example-1-input" title="Permanent link">&para;</a></h3>
+<p>echo user input</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;tasks&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;hello:echo:user-input&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;echo user input&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;echo ${input:project_directory}&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;variables&quot;</span><span class="p">:</span> <span class="p">{}</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>if you want to set the default value, please define the variable:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;tasks&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;hello:echo:user-input&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;echo user input&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;echo ${input:project_directory}&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;variables&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;project_directory&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;project directory&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${HOME}/test-project&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="example-2-select">example 2: select<a class="headerlink" href="#example-2-select" title="Permanent link">&para;</a></h3>
+<p>echo user select</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;tasks&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;hello:echo:user-select&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;echo user select&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;echo ${select:dotnet_template}&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;variables&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;dotnet_template&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;dotnet core template&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;console&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;classlib&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;wpf&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;wpflib&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;wpfcustomcontrollib&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;wpfusercontrollib&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;winforms&quot;</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="example-3-multiselect">example 3: multiselect<a class="headerlink" href="#example-3-multiselect" title="Permanent link">&para;</a></h3>
+<p>echo files path, you can use <code>separator</code> to control the result string.</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;tasks&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;hello:echo:multiselect&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;echo user multiselect&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;echo ${multiselect:METADATA}&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;variables&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;METADATA&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;sfdc metadata&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;separator&quot;</span><span class="p">:</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;ApexClass&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;ApexComponent&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;ApexPage&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;ApexTestSuite&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;ApexTrigger&quot;</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="example-4-openfolderdailog">example 4: openFolderDailog<a class="headerlink" href="#example-4-openfolderdailog" title="Permanent link">&para;</a></h3>
+<p>echo directory path</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;tasks&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;hello:echo:folder-path&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;echo directory&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;echo ${openFolderDailog:project_directory}&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;variables&quot;</span><span class="p">:</span> <span class="p">{}</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="example-5-singlefiledailog">example 5: singleFileDailog<a class="headerlink" href="#example-5-singlefiledailog" title="Permanent link">&para;</a></h3>
+<p>single file dailog, you can use <code>filters</code> to control the file type.</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;tasks&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;hello:echo:file-path&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;echo single file path&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;echo ${singleFileDailog:package_xml}&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;variables&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;package_xml&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;sfdc package.xml path&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;filters&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;package.xml&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;xml&quot;</span><span class="p">]</span> <span class="p">},</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;./manifest/package.xml&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="example-6-multifilesdailog">example 6: multiFilesDailog<a class="headerlink" href="#example-6-multifilesdailog" title="Permanent link">&para;</a></h3>
+<p>Mutliple File Paths Selector</p>
+<ul>
+<li>use <code>filters</code> to control the file type.</li>
+<li>use <code>separator</code> to control the result string.</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;tasks&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;hello:echo:files-paths&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;echo files paths&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;echo ${multiFilesDailog:sfdcsourcesfiles}&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;variables&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;sfdcsourcesfiles&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;sfdc sources files&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;separator&quot;</span><span class="p">:</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="example-7-run-command-in-wsl">example 7: run command in wsl<a class="headerlink" href="#example-7-run-command-in-wsl" title="Permanent link">&para;</a></h3>
+<p>change the shellPath, you can run command in wsl/bash/powershell ... or other termial</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;run command in wsl&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;termial&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;xycode&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;shellPath&quot;</span><span class="p">:</span> <span class="s2">&quot;wsl.exe&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;pwd&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="example-8-auto-formatter-and-auto-runner">example 8: auto formatter and auto runner<a class="headerlink" href="#example-8-auto-formatter-and-auto-runner" title="Permanent link">&para;</a></h3>
+<p>After you save file in vscode,
+It will use <code>yapf</code> to format code and run python code automatically.</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;tasks&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="nt">&quot;variables&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="nt">&quot;onSaveEvents&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;format python code&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;format python code&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;filetypes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;.py&quot;</span><span class="p">],</span>
+            <span class="nt">&quot;inActive&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;yapf \&quot;${file}\&quot; --style \&quot;google\&quot; -i&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;run python file&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;run python file&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;filetypes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;.py&quot;</span><span class="p">],</span>
+            <span class="nt">&quot;inActive&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="nt">&quot;cwd&quot;</span><span class="p">:</span> <span class="s2">&quot;${fileDirname}&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;python \&quot;${file}\&quot;&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="example-10-user-prettier-to-format-source-code">example 10: user prettier to format source code.<a class="headerlink" href="#example-10-user-prettier-to-format-source-code" title="Permanent link">&para;</a></h3>
+<p>use <code>Prettier</code> to pretty code .</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;tasks&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="nt">&quot;variables&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="nt">&quot;onSaveEvents&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;pretty code.&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Prettier is an opinionated code formatter.&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;filetypes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;.json&quot;</span><span class="p">,</span> <span class="s2">&quot;.javascript&quot;</span><span class="p">,</span> <span class="s2">&quot;.js&quot;</span><span class="p">,</span> <span class="s2">&quot;.md&quot;</span><span class="p">,</span> <span class="s2">&quot;.css&quot;</span><span class="p">,</span> <span class="s2">&quot;.vue&quot;</span><span class="p">],</span>
+            <span class="nt">&quot;inActive&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="nt">&quot;cwd&quot;</span><span class="p">:</span> <span class="s2">&quot;${fileDirname}&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;prettier --write \&quot;${file}\&quot; --single-quote=true --end-of-line=lf --arrow-parens=always --tab-width=4&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+
+<h2 id="shortkey">Shortkey<a class="headerlink" href="#shortkey" title="Permanent link">&para;</a></h2>
+<p>shortkey: <code>ctrl+shift+i</code></p>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
+<p>None.</p>
+<h2 id="extension-settings">Extension Settings<a class="headerlink" href="#extension-settings" title="Permanent link">&para;</a></h2>
+<p>This extension contributes the following settings:</p>
+<ul>
+<li><code>xycode.maxBuffer</code>: The maxBuffer option specifies the largest number of bytes allowed on stdout or stderr.</li>
+</ul>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+        
+          <a href="index.ja/" title="xycode日本語" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                xycode日本語
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 Exia Huang
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/exiahuang" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/ExiaSfdc" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.facebook.com/profile.php?id=100015890262852" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/application.808e90bb.js"></script>
+      
+        
+        
+          
+          <script src="assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+          
+            
+              
+                <script src="assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="assets/javascripts/lunr/lunr.ja.js"></script>
+              
+            
+          
+            
+              
+              
+            
+          
+          
+            <script src="assets/javascripts/lunr/lunr.multi.js"></script>
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      
+    
+  </body>
+</html>
