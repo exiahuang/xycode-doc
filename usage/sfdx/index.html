@@ -401,17 +401,28 @@
                 <h1 id="agenda">Agenda<a class="headerlink" href="#agenda" title="Permanent link">&para;</a></h1>
 <p>Use xycode and Salesforce CLI to develope sfdc.</p>
 <h1 id="config">config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h1>
-<p><a href="http">xycode.sfdx.json</a></p>
+<p>Config for windows user: <a href="https://github.com/exiahuang/xycode-config/blob/master/windows/xycode.sfdx.json">xycode.sfdx.json</a></p>
+<p>Config for linux  user: <a href="https://github.com/exiahuang/xycode-config/blob/master/linux/xycode.sfdx.json">xycode.sfdx.json</a></p>
+<p>Config for mac user: <a href="https://github.com/exiahuang/xycode-config/blob/master/mac/xycode.sfdx.json">xycode.sfdx.json</a></p>
 <h1 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h1>
 <h2 id="create-a-project">Create a project<a class="headerlink" href="#create-a-project" title="Permanent link">&para;</a></h2>
 <p><code>force:project:create</code></p>
+<p><img alt="xycode-sfdx-diff-meta" src="../../images/xycode-sfdx-diff-meta.gif" /></p>
 <h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h2>
 <p><code>force:auth:web:login</code></p>
 <h2 id="retrieve-metadata">Retrieve metadata<a class="headerlink" href="#retrieve-metadata" title="Permanent link">&para;</a></h2>
 <p><code>force:source:retrieve:metadata</code></p>
+<p><img alt="xycode-sfdx-retrieve-meta" src="../../images/xycode-sfdx-retrieve-meta.gif" /></p>
 <h2 id="deploy-metadata">Deploy metadata<a class="headerlink" href="#deploy-metadata" title="Permanent link">&para;</a></h2>
 <p><code>force:source:deploy:metadata</code>
 <code>force:source:deploy:current_file</code></p>
+<h2 id="diff-metadata">Diff metadata<a class="headerlink" href="#diff-metadata" title="Permanent link">&para;</a></h2>
+<p><code>force:source:diff:metadata</code></p>
+<p>You can diff with any sfdc organization.</p>
+<h3 id="diff-source">diff source<a class="headerlink" href="#diff-source" title="Permanent link">&para;</a></h3>
+<p><img alt="xycode-sfdx-diff-meta" src="../../images/xycode-sfdx-diff-meta.gif" /></p>
+<h3 id="diff-profile">diff profile<a class="headerlink" href="#diff-profile" title="Permanent link">&para;</a></h3>
+<p><img alt="xycode-sfdx-diff-profile-meta" src="../../images/xycode-sfdx-diff-profile-meta.gif" /></p>
 <h1 id="useful-tips">Useful Tips<a class="headerlink" href="#useful-tips" title="Permanent link">&para;</a></h1>
 <h2 id="auto-run-apex-anonymous-code">auto run apex anonymous code<a class="headerlink" href="#auto-run-apex-anonymous-code" title="Permanent link">&para;</a></h2>
 <p>auto run apex anonymous code after save .apex.</p>
@@ -430,6 +441,7 @@ set <code>inActive</code> false as below.</p>
 </pre></div>
 
 <p>also, you can write a command and run <code>.soql</code> after you save.</p>
+<p><img alt="xycode-sfdx-run-apex-anonymous" src="../../images/xycode-sfdx-run-apex-anonymous.gif" /></p>
 <h2 id="pretty-apex-code">pretty apex code<a class="headerlink" href="#pretty-apex-code" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span>    <span class="s2">&quot;onSaveEvents&quot;</span><span class="err">:</span> <span class="p">[</span>
         <span class="p">{</span>
