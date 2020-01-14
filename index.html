@@ -42,7 +42,7 @@
     
     
       
-        <title>xycode</title>
+        <title>Xycode</title>
       
     
     
@@ -79,7 +79,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#xycode" tabindex="1" class="md-skip">
+      <a href="#reference" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -105,7 +105,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                xycode
+                Home
               
             </span>
           
@@ -181,7 +181,7 @@
   <li class="md-tabs__item">
     
       <a href="." class="md-tabs__link md-tabs__link--active">
-        xycode
+        Home
       </a>
     
   </li>
@@ -258,22 +258,18 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
-      
-    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        xycode
+        Home
       </label>
     
-    <a href="." title="xycode" class="md-nav__link md-nav__link--active">
-      xycode
+    <a href="." title="Home" class="md-nav__link md-nav__link--active">
+      Home
     </a>
     
       
 <nav class="md-nav md-nav--secondary">
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
@@ -626,8 +622,6 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -865,8 +859,9 @@
                   <a href="https://github.com/exiahuang/Xycode/edit/master/docs/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="xycode">xycode<a class="headerlink" href="#xycode" title="Permanent link">&para;</a></h1>
-<p><a href="https://github.com/exiahuang/Xycode">xycode</a> is a lightweight command executor for vscode.</p>
+                  <h1>Home</h1>
+                
+                <p><a href="https://github.com/exiahuang/Xycode">xycode</a> is a lightweight command executor for vscode.</p>
 <p>If you want to build a vscode extension, maybe you can use <code>xycode</code> first.</p>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <p>Project Details</p>
@@ -1285,37 +1280,37 @@ It will use <code>yapf</code> to format code and run python code automatically.<
 <p><img alt="xysfdx-open-wsl" src="https://raw.githubusercontent.com/exiahuang/xycode-doc/gh-pages/images/xysfdx-open-wsl.gif" /></p>
 <h3 id="example-13-explorer-and-sublime">example 13: explorer and sublime<a class="headerlink" href="#example-13-explorer-and-sublime" title="Permanent link">&para;</a></h3>
 <p>open directory in <code>windows explorer</code> or <code>sublime</code>.</p>
-<p>```json
-{
-    "tasks": [
-        {
-            "label": "windows: explorer",
-            "description": "open explorer",
-            "notShowProcess": true,
-            "command": "start explorer ${workspaceFolder}"
-        },
-        {
-            "label": "windows: open home directory",
-            "description": "open home directory",
-            "notShowProcess": true,
-            "command": "start explorer ${HOME}"
-        },
-        {
-            "label": "sublime",
-            "description": "open sublime",
-            "notShowProcess": true,
-            "command": "\"C:\Program Files\Sublime Text 3\sublime_text.exe\" \"${openFolderDailog:project_directory}\""
-        },
-        {
-            "label": "sublime:open this workspace",
-            "description": "open sublime",
-            "notShowProcess": true,
-            "command": "\"C:\Program Files\Sublime Text 3\sublime_text.exe\" \"${workspaceFolder}\""
-        }
-    ],
-    "variables": {
-    }
-}</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;tasks&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;windows: explorer&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;open explorer&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;notShowProcess&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;start explorer ${workspaceFolder}&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;windows: open home directory&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;open home directory&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;notShowProcess&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;start explorer ${HOME}&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;sublime&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;open sublime&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;notShowProcess&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;\&quot;C:\\Program Files\\Sublime Text 3\\sublime_text.exe\&quot; \&quot;${openFolderDailog:project_directory}\&quot;&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;sublime:open this workspace&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;open sublime&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;notShowProcess&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;\&quot;C:\\Program Files\\Sublime Text 3\\sublime_text.exe\&quot; \&quot;${workspaceFolder}\&quot;&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;variables&quot;</span><span class="p">:</span> <span class="p">{}</span>
+<span class="p">}</span>
+</pre></div>
+
 <h2 id="shortkey">Shortkey<a class="headerlink" href="#shortkey" title="Permanent link">&para;</a></h2>
 <p>shortkey: <code>ctrl+shift+i</code></p>
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
