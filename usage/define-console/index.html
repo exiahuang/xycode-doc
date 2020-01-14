@@ -13,7 +13,7 @@
         <meta name="description" content="Xycode is a lightweight command executor for vscode.">
       
       
-        <link rel="canonical" href="https://github.io/exiahuang/xycode-doc/usage/c-program/">
+        <link rel="canonical" href="https://github.io/exiahuang/xycode-doc/usage/define-console/">
       
       
         <meta name="author" content="Exia.Huang">
@@ -42,7 +42,7 @@
     
     
       
-        <title>C Program in xycode</title>
+        <title>Define console</title>
       
     
     
@@ -79,7 +79,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#agenda" tabindex="1" class="md-skip">
+      <a href="#define-console" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -105,7 +105,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                C Program in xycode
+                Define console
               
             </span>
           
@@ -198,7 +198,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="./" class="md-tabs__link md-tabs__link--active">
+        <a href="../c-program/" class="md-tabs__link md-tabs__link--active">
           Usage
         </a>
       
@@ -310,6 +310,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../c-program/" title="C Program in xycode" class="md-nav__link">
+      C Program in xycode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -320,22 +332,10 @@
       
     
     
-    <a href="./" title="C Program in xycode" class="md-nav__link md-nav__link--active">
-      C Program in xycode
-    </a>
-    
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../define-console/" title="Define console" class="md-nav__link">
+    <a href="./" title="Define console" class="md-nav__link md-nav__link--active">
       Define console
     </a>
+    
   </li>
 
         
@@ -407,70 +407,80 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/exiahuang/Xycode/edit/master/docs/usage/c-program.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/exiahuang/Xycode/edit/master/docs/usage/define-console.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="agenda">Agenda<a class="headerlink" href="#agenda" title="Permanent link">&para;</a></h1>
-<p>Use xycode and Gcc to develope c program.</p>
+                <h1 id="define-console">Define console<a class="headerlink" href="#define-console" title="Permanent link">&para;</a></h1>
+<p>Define console in <a href="https://marketplace.visualstudio.com/items?itemName=ExiaHuang.xycode">xycode</a>.</p>
 <h1 id="config">config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h1>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;tasks&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
-            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;make:version&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;make -v&quot;</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;console: WSL&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;open WSL&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;notShowProcess&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;cd ${workspaceFolder} &amp;&amp; start wsl&quot;</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;make:clean&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;make clean&quot;</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;console: cmd&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;open cmd&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;notShowProcess&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;start cmd&quot;</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;make:hello&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;make hello&quot;</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;console: Cmder&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;open Cmder&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;notShowProcess&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;Cmder.exe /single ${workspaceFolder}&quot;</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;make:all&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;make all&quot;</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;console: bash&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;open bash&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;notShowProcess&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;cd ${workspaceFolder} &amp;&amp; start bash&quot;</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;make:target&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;make ${input:make_target}&quot;</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;console: mintty.exe&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;open mintty.exe&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;notShowProcess&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;start /b mintty.exe /bin/bash --login&quot;</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;gcc:compile&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;cwd&quot;</span><span class="p">:</span> <span class="s2">&quot;${fileDirname}&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;gcc -o ${fileBasenameNoExtension} ${file}&quot;</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;windows: explorer&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;open explorer&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;notShowProcess&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;start explorer ${workspaceFolder}&quot;</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;gcc:compile_and_run&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;cwd&quot;</span><span class="p">:</span> <span class="s2">&quot;${fileDirname}&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;gcc -o ${fileBasenameNoExtension} ${file} &amp;&amp; ${fileBasenameNoExtension}&quot;</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;windows: open home directory&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;open home directory&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;notShowProcess&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;start explorer ${HOME}&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;sublime&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;open sublime&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;notShowProcess&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;\&quot;C:\\Program Files\\Sublime Text 3\\sublime_text.exe\&quot; \&quot;${openFolderDailog:project_directory}\&quot;&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;sublime:open this workspace&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;open sublime&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;notShowProcess&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;\&quot;C:\\Program Files\\Sublime Text 3\\sublime_text.exe\&quot; \&quot;${workspaceFolder}\&quot;&quot;</span>
         <span class="p">}</span>
     <span class="p">],</span>
-    <span class="nt">&quot;variables&quot;</span><span class="p">:</span> <span class="p">{},</span>
-    <span class="nt">&quot;onSaveEvents&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;compile and run c file&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;compile and run c file after save&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;filetypes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;.c&quot;</span><span class="p">],</span>
-            <span class="nt">&quot;inActive&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-            <span class="nt">&quot;cwd&quot;</span><span class="p">:</span> <span class="s2">&quot;${fileDirname}&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;gcc -o ${fileBasenameNoExtension} ${file} &amp;&amp; ${fileBasenameNoExtension}&quot;</span>
+    <span class="nt">&quot;variables&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;myproject_directory&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;apex code snippt file&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;${HOME}/.xycode&quot;</span><span class="p">]</span>
         <span class="p">}</span>
-    <span class="p">]</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 
-<h1 id="write-hello-world">write hello world<a class="headerlink" href="#write-hello-world" title="Permanent link">&para;</a></h1>
-<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">args</span><span class="p">[])</span>
-<span class="p">{</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello, world!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-<p>After save the file, you can see the result.</p>
+<h1 id="define-console_1">define console<a class="headerlink" href="#define-console_1" title="Permanent link">&para;</a></h1>
+<p><img alt="xysfdx-open-wsl" src="https://raw.githubusercontent.com/exiahuang/xycode-doc/gh-pages/images/xysfdx-open-wsl.gif" /></p>
                 
                   
                 
@@ -492,7 +502,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../index.zh-CN/" title="xycode中文" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../c-program/" title="C Program in xycode" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -501,19 +511,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                xycode中文
+                C Program in xycode
               </span>
             </div>
           </a>
         
         
-          <a href="../define-console/" title="Define console" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../nodejs/" title="Nodejs in xycode" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Define console
+                Nodejs in xycode
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
