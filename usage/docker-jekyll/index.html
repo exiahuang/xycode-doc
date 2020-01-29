@@ -13,7 +13,7 @@
         <meta name="description" content="Xycode is a lightweight command executor for vscode.">
       
       
-        <link rel="canonical" href="https://github.io/exiahuang/xycode-doc/usage/python/">
+        <link rel="canonical" href="https://github.io/exiahuang/xycode-doc/usage/docker-jekyll/">
       
       
         <meta name="author" content="Exia.Huang">
@@ -42,7 +42,7 @@
     
     
       
-        <title>python in xycode</title>
+        <title>xycode + docker + jekyll - Xycode</title>
       
     
     
@@ -79,7 +79,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#agenda" tabindex="1" class="md-skip">
+      <a href="#xycode-docker-jekyll" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -105,7 +105,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                python in xycode
+                xycode + docker + jekyll
               
             </span>
           
@@ -358,11 +358,63 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../docker-jekyll/" title="xycode + docker + jekyll" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        xycode + docker + jekyll
+      </label>
+    
+    <a href="./" title="xycode + docker + jekyll" class="md-nav__link md-nav__link--active">
       xycode + docker + jekyll
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirement" class="md-nav__link">
+    requirement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config-setup" class="md-nav__link">
+    config setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-to-develope-jekyll-in-docker" class="md-nav__link">
+    start to develope jekyll in docker
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -394,20 +446,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="python in xycode" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../python/" title="python in xycode" class="md-nav__link">
       python in xycode
     </a>
-    
   </li>
 
         
@@ -445,6 +488,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirement" class="md-nav__link">
+    requirement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config-setup" class="md-nav__link">
+    config setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-to-develope-jekyll-in-docker" class="md-nav__link">
+    start to develope jekyll in docker
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -455,57 +528,38 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/exiahuang/Xycode/edit/master/docs/usage/python.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/exiahuang/Xycode/edit/master/docs/usage/docker-jekyll.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="agenda">Agenda<a class="headerlink" href="#agenda" title="Permanent link">&para;</a></h1>
-<p>Use xycode and python.</p>
-<h1 id="config">config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h1>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;tasks&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;python:run&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;run python file&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;cwd&quot;</span><span class="p">:</span> <span class="s2">&quot;${fileDirname}&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;python \&quot;${file}\&quot;&quot;</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;python:version&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;print python version&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;python --version&quot;</span>
-        <span class="p">}</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;variables&quot;</span><span class="p">:</span> <span class="p">{},</span>
-    <span class="nt">&quot;onSaveEvents&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;format python code&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;format python code&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;filetypes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;.py&quot;</span><span class="p">],</span>
-            <span class="nt">&quot;inActive&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;yapf \&quot;${file}\&quot; --style \&quot;google\&quot; -i&quot;</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;run python file&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;run python file&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;filetypes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;.py&quot;</span><span class="p">],</span>
-            <span class="nt">&quot;inActive&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-            <span class="nt">&quot;cwd&quot;</span><span class="p">:</span> <span class="s2">&quot;${fileDirname}&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;python \&quot;${file}\&quot;&quot;</span>
-        <span class="p">}</span>
-    <span class="p">]</span>
-<span class="p">}</span>
+                <h1 id="xycode-docker-jekyll">xycode + docker + jekyll<a class="headerlink" href="#xycode-docker-jekyll" title="Permanent link">&para;</a></h1>
+<h2 id="requirement">requirement<a class="headerlink" href="#requirement" title="Permanent link">&para;</a></h2>
+<ul>
+<li>docker</li>
+<li>vscode</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ExiaHuang.xycode">xycode</a></li>
+</ul>
+<h2 id="config-setup">config setup<a class="headerlink" href="#config-setup" title="Permanent link">&para;</a></h2>
+<p>download xycode config for <code>docker-jekyll</code></p>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> ~/.xycode <span class="o">&amp;&amp;</span> curl -O https://github.com/exiahuang/xycode-config/linux/xycode.docker-jekyll.json
 </pre></div>
 
+<h2 id="start-to-develope-jekyll-in-docker">start to develope jekyll in docker<a class="headerlink" href="#start-to-develope-jekyll-in-docker" title="Permanent link">&para;</a></h2>
+<ol>
+<li>new a jekyll project : use <code>docker:jekyll:new:project</code></li>
+<li>create a docker container : use <code>docker:jekyll:create container</code></li>
+<li>open jekyll server : use <code>docker:jekyll:serve</code>, open <code>http://localhost:4000/</code></li>
+<li>if you want to use commmand below, please install <a href="https://github.com/jekyll/jekyll-compose">jekyll/jekyll-compose</a><ul>
+<li><code>docker:jekyll:new:page</code></li>
+<li><code>docker:jekyll:new:post</code></li>
+<li><code>docker:jekyll:new:draft</code></li>
+</ul>
+</li>
+</ol>
 <blockquote>
-<blockquote>
-<p>please install yapf if you want to auto format python code.</p>
+<p>Add this line to your application's Gemfile: gem 'jekyll-compose', group: [:jekyll_plugins]
+And then execute: \$ bundle</p>
 </blockquote>
-</blockquote>
-<h1 id="write-hello-world">write hello world<a class="headerlink" href="#write-hello-world" title="Permanent link">&para;</a></h1>
-<div class="codehilite"><pre><span></span><span class="nx">print</span><span class="p">(</span><span class="s1">&#39;hello world, python&#39;</span><span class="p">);</span>
-</pre></div>
-
-<p>After save the file, you can see the result.</p>
+<p><img alt="xysfdx-docker-jekyll" src="https://raw.githubusercontent.com/exiahuang/xycode-doc/gh-pages/images/docker-jekyll.gif" /></p>
                 
                   
                 
@@ -527,7 +581,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../nodejs/" title="Nodejs in xycode" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../docker-flask/" title="xycode + docker + flask" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -536,19 +590,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Nodejs in xycode
+                xycode + docker + flask
               </span>
             </div>
           </a>
         
         
-          <a href="../sfdx/" title="Salesforce CLI in xycode" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../docker/" title="use xycode and docker" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Salesforce CLI in xycode
+                use xycode and docker
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
