@@ -534,17 +534,17 @@
                 <h1 id="xycode-docker-express">xycode + docker + express<a class="headerlink" href="#xycode-docker-express" title="Permanent link">&para;</a></h1>
 <h2 id="config-setup">config setup<a class="headerlink" href="#config-setup" title="Permanent link">&para;</a></h2>
 <p>download dockerfile</p>
-<div class="codehilite"><pre><span></span>curl -O https://github.com/exiahuang/xycode-config/docker/express/Dockerfile
+<div class="codehilite"><pre><span></span>curl -O https://raw.githubusercontent.com/exiahuang/xycode-config/master/docker/express/Dockerfile
 
-curl -O https://github.com/exiahuang/xycode-config/docker/express/docker-compose.yml
+curl -O https://raw.githubusercontent.com/exiahuang/xycode-config/master/docker/express/docker-compose.yml
 </pre></div>
 
 <p>download xycode config for <code>docker-express</code></p>
-<div class="codehilite"><pre><span></span><span class="nb">cd</span> ~/.xycode <span class="o">&amp;&amp;</span> curl -O https://github.com/exiahuang/xycode-config/linux/xycode.docker-express.json
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> ~/.xycode <span class="o">&amp;&amp;</span> curl -O https://raw.githubusercontent.com/exiahuang/xycode-config/master/linux/xycode.docker-express.json
 </pre></div>
 
 <h2 id="start-to-develope-express-in-docker">start to develope express in docker<a class="headerlink" href="#start-to-develope-express-in-docker" title="Permanent link">&para;</a></h2>
-<p><img alt="xysfdx-docker-express" src="https://raw.githubusercontent.com/exiahuang/xycode-doc/gh-pages/images/docker-express.gif" /></p>
+<p><img alt="xycode-docker-express" src="https://raw.githubusercontent.com/exiahuang/xycode-doc/gh-pages/images/xycode-docker-express.gif" /></p>
 <h2 id="tips">tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h2>
 <p>add <code>docker</code> to your json file in <code>~/.xycode</code>,
 then each task in this json config file will run in docker container.</p>
@@ -564,6 +564,10 @@ then each task in this json config file will run in docker container.</p>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+
+<blockquote>
+<p>change <code>~/.xycode/xycode.docker-express.json</code> config file, define your command.</p>
+</blockquote>
                 
                   
                 
